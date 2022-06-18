@@ -21,17 +21,14 @@ function love.update(dt)
   InputMixin:update()
 end
 
-
 function love.draw()
   Push:apply('start')
-  
-  displayDebug()
+  DisplayDebug()
   Push:apply('end')
 end
 
-function displayDebug()
+function DisplayDebug()
   -- simple FPS display across all states
-  -- love.graphics.setFont(gFonts['small'])
   love.graphics.setColor(0, 255, 0, 255)
   love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 5, 5)
   InputMixin:debug()

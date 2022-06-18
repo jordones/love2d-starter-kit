@@ -11,11 +11,7 @@ function InputMixin:keypressed(key)
 end
 
 function InputMixin:wasPressed(key)
-  if love.keyboard.keysPressed[key] then
-    return true
-  else
-    return false
-  end
+  return love.keyboard.keysPressed[key]
 end
 
 function InputMixin:update()
