@@ -10,6 +10,9 @@ function love.load()
     resizable = true
   })
 
+  local stateTable = {}
+  GlobalStateMachine = StateMachine(stateTable)
+
   InputMixin()
 end
 
@@ -19,11 +22,13 @@ end
 
 function love.update(dt)
   InputMixin:update()
+  GlobalStateMachine.update(dt)
 end
 
 function love.draw()
   Push:apply('start')
   DisplayDebug()
+  GlobalStateMachine.render()
   Push:apply('end')
 end
 
