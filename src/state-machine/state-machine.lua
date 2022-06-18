@@ -7,6 +7,10 @@ function StateMachine:init(states)
   self.current = BaseState()
 end
 
-function StateMachine:update(dt) end
+function StateMachine:update(dt)
+  self.current:update(dt)
+end
 
-function StateMachine:render() end
+function StateMachine:render()
+  self.current:render()
+end

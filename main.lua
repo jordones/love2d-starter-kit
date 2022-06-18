@@ -22,13 +22,13 @@ end
 
 function love.update(dt)
   InputMixin:update()
-  GlobalStateMachine.update(dt)
+  GlobalStateMachine:update(dt)
 end
 
 function love.draw()
   Push:apply('start')
   DisplayDebug()
-  GlobalStateMachine.render()
+  GlobalStateMachine:render()
   Push:apply('end')
 end
 
