@@ -11,9 +11,10 @@ function love.load()
   })
 
   local stateTable = {
-    ['Template'] = function() return TemplateState() end
+    [STATE_TEMPLATE] = function() return TemplateState() end
   }
   GlobalStateMachine = StateMachine(stateTable)
+  GlobalStateMachine:change(STATE_TEMPLATE)
   InputMixin()
 end
 
