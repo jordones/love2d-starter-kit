@@ -1,5 +1,3 @@
-require 'src/state-machine/base-state'
-
 StateMachine = Class{}
 
 function StateMachine:init(states)

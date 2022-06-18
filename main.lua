@@ -10,9 +10,10 @@ function love.load()
     resizable = true
   })
 
-  local stateTable = {}
+  local stateTable = {
+    ['Template'] = function() return TemplateState() end
+  }
   GlobalStateMachine = StateMachine(stateTable)
-
   InputMixin()
 end
 

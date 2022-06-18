@@ -1,0 +1,1 @@
+require 'src/state-machine/states/template-state'
